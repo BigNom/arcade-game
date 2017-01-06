@@ -1,5 +1,8 @@
-# Acrade Game
+# Arcade Game
 ---
+The is a simple little **Object Oriented Javascript** game that serves part of the **_Nanodegree Front-End Web Developer_** run by Udacity.
+
+
 ### Installation
 
 Download or clone the repository to your computer and run the following command in the root directory
@@ -12,7 +15,7 @@ $ yarn install
 
 ## Getting started
 
-From the command line run gulp to start up a development server on localhost:3030.
+From the command line run gulp to start up browser-snyc development server on localhost:3030.
 
 ## File Structure
 
