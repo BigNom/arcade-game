@@ -14,6 +14,14 @@ var plumber = require('gulp-plumber');
 var beeper = require('beeper');
 var del = require('del');
 var sourcemaps = require('gulp-sourcemaps');
+var htmlmin = require('gulp-htmlmin');
+
+// Minify any HTML files
+gulp.task('html', function() {
+  return gulp.src('app/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'));
+});
 
 //Error Helper
 function onError(err) {
@@ -41,7 +49,7 @@ gulp.task('scripts', function() {
          .pipe(sourcemaps.init())
   .pipe(jshint())
   .pipe(jshint.reporter('default'))
-  // .pipe(concat('all.js'))
+  .pipe(concat('all.js'))
   .pipe(uglify())
   .pipe(sourcemaps.write())
   .pipe(gulp.dest('dist/js'));
@@ -67,7 +75,7 @@ gulp.task('server', function() {
 gulp.task('browsersync', function(cb) {
   return browsersync({
     server: {
-      baseDir:'./'
+      baseDir:'./dist/'
     }
   }, cb);
 });
@@ -87,6 +95,8 @@ gulp.task('clean', function (cb) {
 
 // Watch Task
 gulp.task('watch', function() {
+  gulp.watch('app/*.html', gulp.series('html',
+    browsersync.reload));
   gulp.watch('app/css/*.css', gulp.series('styles',
     browsersync.reload));
   gulp.watch('app/js/*.js', gulp.series('scripts',
@@ -96,11 +106,4 @@ gulp.task('watch', function() {
  });
 
 // Default Task
-gulp.task('default', gulp.parallel('styles', 'scripts', 'images', 'browsersync', 'watch'));
-
-
-
-
-
-
-
+gulp.task('default', gulp.parallel('html', 'styles', 'scripts', 'images', 'browsersync', 'watch'));

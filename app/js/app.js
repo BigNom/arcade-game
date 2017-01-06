@@ -12,7 +12,7 @@ function Speed(min, max) {
   min = 10;
   max = 100;
   return Math.random() * (max - min) + min;
-};
+}
 
 // Enemies our player must avoid
 var Enemy = function(x, y) {

@@ -1,9 +1,9 @@
 {
   "name": "frontend-nanodegree-arcade-game",
   "version": "1.0.0",
-  "main": "index.js",
-  "start": "node index.js",
-
+  "main": "gulpfile.js",
+  "dev": "gulp",
+  "start": "node server.js",
   "license": "MIT",
   "dependencies": {
     "eslint": "^3.11.1",
@@ -19,6 +19,7 @@
     "del": "^2.2.2",
     "gulp": "gulpjs/gulp.git#4.0",
     "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^3.1.1",
     "gulp-jshint": "^2.0.4",
     "gulp-myth": "^1.1.0",
