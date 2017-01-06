@@ -2,30 +2,35 @@
   "name": "frontend-nanodegree-arcade-game",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "start": "node index.js",
 
+  "license": "MIT",
   "dependencies": {
-  "eslint": "^3.11.1",
-  "express": "^4.14.0",
-  "gulp-cli": "^1.2.2",
-  "jshint": "^2.9.4"
-},
-"devDependencies": {
-  "beeper": "^1.1.1",
-  "browser-sync": "^2.18.2",
-  "browserify": "^13.1.1",
-  "connect": "^3.5.0",
-  "del": "^2.2.2",
-  "gulp": "gulpjs/gulp.git#4.0",
-  "gulp-concat": "^2.6.1",
-  "gulp-imagemin": "^3.1.1",
-  "gulp-jshint": "^2.0.4",
-  "gulp-myth": "^1.1.0",
-  "gulp-plumber": "^1.1.0",
-  "gulp-sourcemaps": "^1.9.1",
-  "gulp-uglify": "^2.0.0",
-  "nodejs-dashboard": "^0.2.1",
-  "serve-static": "^1.11.1",
-  "vinyl-source-stream": "^1.1.0"
-}
+    "eslint": "^3.11.1",
+    "express": "^4.14.0",
+    "gulp-cli": "^1.2.2",
+    "jshint": "^2.9.4"
+  },
+  "devDependencies": {
+    "beeper": "^1.1.1",
+    "browser-sync": "^2.18.2",
+    "browserify": "^13.1.1",
+    "connect": "^3.5.0",
+    "del": "^2.2.2",
+    "gulp": "gulpjs/gulp.git#4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-myth": "^1.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "nodejs-dashboard": "^0.2.1",
+    "serve-static": "^1.11.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "engines": {
+    "node": "7.2.0",
+    "yarn": "0.17.10"
+  }
 }
