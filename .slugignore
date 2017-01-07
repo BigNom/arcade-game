@@ -1,0 +1,2 @@
+# ignore yarn on deployment to heroku
+yarn.lock

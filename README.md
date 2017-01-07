@@ -38,6 +38,14 @@ From the command line run gulp to start up browser-snyc development server on lo
 
 Use the arrow keys to get to the other side. Try to dodge the **bugs** or you will have to start over again.  
 
+## Setting up heroku
+
+From the command line run to run server on localhost:5000.
+
+```sh
+$ heroku local
+```
+
 ## License
 
 The contents of this repository are covered under the [MIT License](LICENSE).

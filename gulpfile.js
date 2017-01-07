@@ -49,7 +49,7 @@ gulp.task('scripts', function() {
          .pipe(sourcemaps.init())
   .pipe(jshint())
   .pipe(jshint.reporter('default'))
-  .pipe(concat('all.js'))
+  .pipe(concat('main.js'))
   .pipe(uglify())
   .pipe(sourcemaps.write())
   .pipe(gulp.dest('dist/js'));
